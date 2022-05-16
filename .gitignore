@@ -3,3 +3,7 @@
 ################################################################################
 
 /.vs/WindowsExperiments/v17
+/.vs/WindowsExperiments
+/cpp/samples/SimpleWindow/Debug
+/Debug
+/x64/Debug/cpp
