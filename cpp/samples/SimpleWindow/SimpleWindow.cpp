@@ -17,12 +17,14 @@ using namespace kos_y;
 // 　　　　hPrevInstance	（未使用）
 // 　　　　lpCmdLine		コマンドライン引数
 // 　　　　nCmdShow			ウィンドウ表示状態
+#pragma warning(disable:28251)
 int APIENTRY _tWinMain(
 	HINSTANCE hInstance,
 	HINSTANCE hPrevInstance,
 	LPTSTR lpCmdLine,
 	int nCmdShow
 )
+#pragma warning(default:28251)
 {
 	// 未使用警告の排除
 	UNREFERENCED_PARAMETER(hPrevInstance);
