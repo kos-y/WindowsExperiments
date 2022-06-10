@@ -9,3 +9,7 @@
 /x64/Debug/cpp
 /cpp/samples/SimpleWindow/x64/Debug
 /x64/Debug
+/cpp/lib/windows/WinCore/x64
+/cpp/lib/windows/Window/x64
+/cpp/samples/SimpleWindow/x64/Release
+/x64/Release
