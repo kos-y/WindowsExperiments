@@ -17,6 +17,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Window", "cpp\lib\windows\W
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "WinCore", "cpp\lib\windows\WinCore\WinCore.vcxproj", "{91E482BE-960A-4B9A-850D-B2BDA55DFA96}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HelloWorldWindow", "cpp\samples\HelloWorldWindow\HelloWorldWindow.vcxproj", "{1E91E987-331B-4D5C-A986-9FCFC698BA09}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -49,6 +51,14 @@ Global
 		{91E482BE-960A-4B9A-850D-B2BDA55DFA96}.Release|x64.Build.0 = Release|x64
 		{91E482BE-960A-4B9A-850D-B2BDA55DFA96}.Release|x86.ActiveCfg = Release|Win32
 		{91E482BE-960A-4B9A-850D-B2BDA55DFA96}.Release|x86.Build.0 = Release|Win32
+		{1E91E987-331B-4D5C-A986-9FCFC698BA09}.Debug|x64.ActiveCfg = Debug|x64
+		{1E91E987-331B-4D5C-A986-9FCFC698BA09}.Debug|x64.Build.0 = Debug|x64
+		{1E91E987-331B-4D5C-A986-9FCFC698BA09}.Debug|x86.ActiveCfg = Debug|Win32
+		{1E91E987-331B-4D5C-A986-9FCFC698BA09}.Debug|x86.Build.0 = Debug|Win32
+		{1E91E987-331B-4D5C-A986-9FCFC698BA09}.Release|x64.ActiveCfg = Release|x64
+		{1E91E987-331B-4D5C-A986-9FCFC698BA09}.Release|x64.Build.0 = Release|x64
+		{1E91E987-331B-4D5C-A986-9FCFC698BA09}.Release|x86.ActiveCfg = Release|Win32
+		{1E91E987-331B-4D5C-A986-9FCFC698BA09}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -60,6 +70,7 @@ Global
 		{41B06557-380D-4D1E-99B4-8FCEB57A2FCD} = {816E3E0D-B93A-49D3-8F80-8EA258206FC4}
 		{7443EE53-93BB-490D-B19B-F628ABFBA4D9} = {41B06557-380D-4D1E-99B4-8FCEB57A2FCD}
 		{91E482BE-960A-4B9A-850D-B2BDA55DFA96} = {41B06557-380D-4D1E-99B4-8FCEB57A2FCD}
+		{1E91E987-331B-4D5C-A986-9FCFC698BA09} = {30565CEA-7C80-4BD3-97EF-DF1490D7FDB8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B4ED7302-9F2D-42AC-A97D-174E96B53169}

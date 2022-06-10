@@ -184,6 +184,15 @@ void CWindow::SetCmdShow(int nCmdShow)
 }
 
 /// <summary>
+/// ウィンドウハンドルの取得
+/// </summary>
+/// <returns>ウィンドウハンドル</returns>
+HWND CWindow::GetWnd()
+{
+	return m_pData->m_hWnd;
+}
+
+/// <summary>
 /// WM_CREATEイベントハンドラ
 /// </summary>
 /// <returns>結果</returns>
@@ -200,6 +209,15 @@ LRESULT CWindow::OnDestroy()
 {
 	::PostQuitMessage(0);
 
+	return 0;
+}
+
+/// <summary>
+/// WM_PAINTイベントハンドラ
+/// </summary>
+/// <returns>結果</returns>
+LRESULT CWindow::OnPaint()
+{
 	return 0;
 }
 
@@ -248,6 +266,12 @@ LRESULT CALLBACK CWindow::WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM
 	case WM_DESTROY:
 		if (pWnd != nullptr) {
 			return pWnd->OnDestroy();
+		}
+		break;
+
+	case WM_PAINT:
+		if (pWnd != nullptr) {
+			return pWnd->OnPaint();
 		}
 		break;
 	}

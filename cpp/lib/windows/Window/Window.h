@@ -95,6 +95,12 @@ protected:
 	void SetCmdShow(int nCmdShow);
 
 	/// <summary>
+	/// ウィンドウハンドルの取得
+	/// </summary>
+	/// <returns>ウィンドウハンドル</returns>
+	HWND GetWnd();
+
+	/// <summary>
 	/// WM_CREATEイベントハンドラ
 	/// </summary>
 	/// <returns>結果</returns>
@@ -105,6 +111,12 @@ protected:
 	/// </summary>
 	/// <returns>結果</returns>
 	virtual LRESULT OnDestroy();
+
+	/// <summary>
+	/// WM_PAINTイベントハンドラ
+	/// </summary>
+	/// <returns>結果</returns>
+	virtual LRESULT OnPaint();
 
 private:
 	/// <summary>
