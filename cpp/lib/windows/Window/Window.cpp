@@ -175,9 +175,9 @@ void CWindow::SetWndProc(WNDPROC lpfnWndProc)
 }
 
 /// <summary>
-/// ウィンドウ表示状態
+/// ウィンドウ表示状態の設定
 /// </summary>
-/// <param name="nCmdShow"></param>
+/// <param name="nCmdShow">ウィンドウ表示状態</param>
 void CWindow::SetCmdShow(int nCmdShow)
 {
 	m_pData->m_nCmdShow = nCmdShow;
