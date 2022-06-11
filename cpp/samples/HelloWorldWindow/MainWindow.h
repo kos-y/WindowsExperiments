@@ -6,7 +6,7 @@
 
 #pragma once
 
-class CMainWindow : public kos_y::CWindow
+class CMainWindow final : public kos_y::CWindow
 {
 public:
 	/// <summary>
@@ -23,5 +23,5 @@ public:
 	/// WM_PAINTイベントハンドラ
 	/// </summary>
 	/// <returns>結果</returns>
-	virtual LRESULT OnPaint();
+	virtual LRESULT OnPaint() override;
 };

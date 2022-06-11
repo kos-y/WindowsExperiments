@@ -34,7 +34,7 @@ int APIENTRY _tWinMain(
 
     // メインウィンドウの作成
     std::unique_ptr<CMainWindow> pWnd(new CMainWindow());
-    if (!pWnd->Create()) {
+    if (!pWnd->Create()) [[unlikely]] {
         return -1;
     }
 

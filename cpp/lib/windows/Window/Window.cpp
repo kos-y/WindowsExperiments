@@ -58,7 +58,7 @@ CWindow::~CWindow()
 bool CWindow::Create()
 {
 	// ウィンドウクラスの登録
-	if (RegisterWindowClass() == 0) {
+	if (RegisterWindowClass() == 0) [[unlikely]] {
 		return false;
 	}
 
@@ -76,7 +76,7 @@ bool CWindow::Create()
 		m_pData->m_hInstance,				// インスタンスハンドル
 		this								// パラメータ
 	);
-	if (m_pData->m_hWnd == NULL) {
+	if (m_pData->m_hWnd == NULL) [[unlikely]] {
 		return false;
 	}
 
@@ -99,7 +99,7 @@ void CWindow::ShowWindowFirst()
 void CWindow::SetInstance(HINSTANCE hInstance)
 {
 	// ウィンドウ作成後は設定不可
-	if (m_pData->m_hWnd != NULL) {
+	if (m_pData->m_hWnd != NULL) [[unlikely]] {
 		return;
 	}
 
@@ -113,7 +113,11 @@ void CWindow::SetInstance(HINSTANCE hInstance)
 void CWindow::SetClassName(LPCTSTR lpClassName)
 {
 	// ウィンドウ作成後は設定不可
-	if (m_pData->m_hWnd != NULL) {
+	if (m_pData->m_hWnd != NULL) [[unlikely]] {
+		return;
+	}
+
+	if (lpClassName == nullptr) [[unlikely]] {
 		return;
 	}
 
@@ -126,6 +130,10 @@ void CWindow::SetClassName(LPCTSTR lpClassName)
 /// <param name="lpTitle">ウィンドウタイトル</param>
 void CWindow::SetTitle(LPCTSTR lpTitle)
 {
+	if (lpTitle == nullptr) [[unlikely]] {
+		return;
+	}
+
 	m_pData->m_strWindowTitle = lpTitle;
 }
 
@@ -171,6 +179,10 @@ void CWindow::SetBackground(HBRUSH hBackground)
 /// <param name="lpfnWndProc">ウィンドウプロシージャ</param>
 void CWindow::SetWndProc(WNDPROC lpfnWndProc)
 {
+	if (lpfnWndProc == nullptr) [[unlikely]] {
+		return;
+	}
+
 	m_pData->m_lpfnWndProc = lpfnWndProc;
 }
 
